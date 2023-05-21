@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+  <%- include('./partials/head.ejs') %>
+  <body>
+    <%- include('./partials/nav.ejs') %>
+    <div class="create-blog content">
+      <form action="/afficher" method="post">
+        <label for="title"> title:</label>
+        <input type="text" id="title" name="title" required />
+        <label for="author">author:</label>
+        <input type="text" id="author" name="author" required />
+        <label for="resume">resume:</label>
+        <textarea id="resume" name="resume" required></textarea>
+        <button>Submit</button>
+      </form>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+  <%- include('./partials/head.ejs') %>
+  <body>
+    <%- include('./partials/nav.ejs') %>
+    <div class="ms-5 mt-5 mx-auto">
+      <% book.map((books)=>{ %>
+      <div class="card mt-5" style="width: 18rem">
+        <div class="card-body">
+          <h3 class="card-title"><%=books.title %></h3>
+          <h4 class="card-subtitle mb-2 text-body-secondary">
+            <%=books.author %>
+          </h4>
+          <p class="card-text"><%=books.resume %></p>
+          <a href="/edit/<%=books.id %>" class="card-link btn btn-primary"
+            >modifier</a
+          >
+          <a href="/delete/<%=books.id%>" class="card-link btn btn-danger"
+            >supprimer</a
+          >
+        </div>
+      </div>
+
+      <% }) %>
+    </div>
+  </body>
+</html>
